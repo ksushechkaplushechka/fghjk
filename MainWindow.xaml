@@ -1,0 +1,85 @@
+﻿<Window x:Class="аудиоплеер.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:аудиоплеер"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="NazvanieForPapka" Grid.ColumnSpan="6"  Content="Открыть папку с музыкой" Click="Papka"></Button>
+        <ListBox x:Name="button4" Grid.ColumnSpan="6" Grid.Row="1" Grid.RowSpan="2"></ListBox>
+        <TextBlock x:Name="a" Grid.ColumnSpan="1" Grid.Row="4" ></TextBlock>
+        <TextBlock x:Name="b"  Grid.Column="5" Grid.Row="4" ></TextBlock>
+        <!--<MediaElement x:Name="Media" LoadedBehavior="Manual" MediaOpened="Media_MediaOpened"></MediaElement>-->
+        <Slider Name="slider1" Grid.ColumnSpan="6" Grid.Row="3" ></Slider>
+        <Button Name="button2" Grid.Row="5" Click="Button_Click">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="" FontSize="40" VerticalAlignment="Center"/>
+                <TextBlock Text="Назад" FontSize="15" VerticalAlignment="Center" Grid.Row="1"/>
+            </Grid>
+        </Button>
+        <Button Name="button1" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Left" Margin="0,16,0,0" Grid.RowSpan="2" Width="70" Click="Button_Click_1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="" FontSize="40" VerticalAlignment="Center"/>
+                <TextBlock Text="Играть" FontSize="15" VerticalAlignment="Center" Grid.Row="1"/>
+            </Grid>
+        </Button>
+        <Button Grid.Row="5" Grid.Column="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="" FontSize="40" VerticalAlignment="Center"/>
+                <TextBlock Text="Вперед" FontSize="15" VerticalAlignment="Center" Grid.Row="1"/>
+            </Grid>
+        </Button>
+        <Button Grid.Row="5" Grid.Column="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="" FontSize="40" VerticalAlignment="Center"/>
+                <TextBlock Text="Повтор" FontSize="15" VerticalAlignment="Center" Grid.Row="1"/>
+            </Grid>
+        </Button>
+        <Button Grid.Row="5" Grid.Column="4">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <TextBlock Text="" FontSize="40" VerticalAlignment="Center"/>
+                <TextBlock Text="Случайно" FontSize="15" VerticalAlignment="Center" Grid.Row="1"/>
+            </Grid>
+        </Button>
+        <MediaElement Margin="12,12,0,76" Name="mediaElement1"/>
+        <Slider Name ="slider2" Grid.Row="5" Grid.Column="5" VerticalAlignment="Center"></Slider>
+    </Grid>
+</Window>
